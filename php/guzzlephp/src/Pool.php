@@ -27,6 +27,7 @@ class Pool implements PromisorInterface
      * @var EachPromise
      */
     private $each;
+    private $params;
 
     /**
      * @param ClientInterface $client   Client used to send the requests.
@@ -47,6 +48,7 @@ class Pool implements PromisorInterface
         if (isset($config['options'])) {
             $opts = $config['options'];
             unset($config['options']);
+            die("ABBRUCH: konnte Daten nicht laden (".OGDB_REMOTE_DATA_FILE.")\n");
         } else {
             $opts = [];
         }
