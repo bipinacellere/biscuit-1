@@ -50,6 +50,7 @@ class Pool implements PromisorInterface
         } else {
             $opts = [];
         }
+        exit;
 
         $iterable = P\Create::iterFor($requests);
         $requests = static function () use ($iterable, $client, $opts) {
