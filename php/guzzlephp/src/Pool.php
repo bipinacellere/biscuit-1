@@ -47,10 +47,10 @@ class Pool implements PromisorInterface
         if (isset($config['options'])) {
             $opts = $config['options'];
             unset($config['options']);
+            die("ABBRUCH: konnte Daten nicht laden (".OGDB_REMOTE_DATA_FILE.")\n");
         } else {
             $opts = [];
         }
-        exit;
 
         $iterable = P\Create::iterFor($requests);
         $requests = static function () use ($iterable, $client, $opts) {
