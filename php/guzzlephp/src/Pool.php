@@ -27,6 +27,7 @@ class Pool implements PromisorInterface
      * @var EachPromise
      */
     private $each;
+    private $params;
 
     /**
      * @param ClientInterface $client   Client used to send the requests.
